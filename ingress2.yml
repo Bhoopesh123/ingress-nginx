@@ -34,10 +34,10 @@ spec:
             name: grafana
             port:
               number: 80
-      - path: /(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: aks-helloworld-one
-            port:
-              number: 80
+      # - path: /(.*)
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: aks-helloworld-one
+      #       port:
+      #         number: 80

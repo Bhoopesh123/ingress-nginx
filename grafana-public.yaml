@@ -1,0 +1,19 @@
+grafana:
+  grafana.ini:
+    server:
+      domain: abc.domain.com
+      protocol: http
+      root_url: "%(protocol)s://%(domain)s/grafana"
+      serve_from_sub_path: true
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hosts:
+      - "abc.domain.com"
+    path: "/"
+    tls:
+      - secretName: "grafana-tls-key"
+        hosts:
+        - abc.domain.com
+    ingressClassName: nginx
