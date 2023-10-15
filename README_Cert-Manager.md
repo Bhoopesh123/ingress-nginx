@@ -8,7 +8,7 @@
 
 # 2. Configure the ClusterIssuer manifest  
 
-  kubectl apply -f CluserIssuer.yaml
+  kubectl apply -f cluster-issuer.yaml
 
 # 3. Install and configure Grafana with Domain and CertManager Config  
 
